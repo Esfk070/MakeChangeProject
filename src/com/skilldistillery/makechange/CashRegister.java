@@ -11,7 +11,8 @@ public class CashRegister {
 		
 		Scanner keyboard = new Scanner(System.in);
 		
-		
+		System.out.print("Enter the price: ");
+		double price = keyboard.nextDouble();
 
 		
 		keyboard.close();
