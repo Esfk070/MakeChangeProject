@@ -60,9 +60,14 @@ public class CashRegister {
 				
 				change = change - (count20*20);
 				//System.out.println(change);
-				if(count20 != 0)
+				if (count20 == 1)
 				{
-					finalPrintout = finalPrintout + count20 + " twenties, ";
+					finalPrintout = finalPrintout + count20 + " twenty dollar bill, ";
+					
+				}
+				else if(count20 != 0)
+				{
+					finalPrintout = finalPrintout + count20 + " twenty dollar bills, ";
 				}
 			}
 			if (change >=10)
@@ -73,9 +78,14 @@ public class CashRegister {
 				change = change - (count10*10);
 				//System.out.println("change: " + change);
 				
-				if(count10 != 0)
+				if (count10 == 1)
 				{
-					finalPrintout = finalPrintout + count10 + " tens, ";
+					finalPrintout = finalPrintout + count10 + " ten dollar bill, ";
+					
+				}
+				else if(count10 != 0)
+				{
+					finalPrintout = finalPrintout + count10 + " ten dollar bills, ";
 				}
 			}
 			
@@ -87,9 +97,14 @@ public class CashRegister {
 				//System.out.println("5: " + count5);
 
 				//System.out.println("change: " + change);
-				if(count5 != 0)
+				if (count5 == 1)
 				{
-					finalPrintout = finalPrintout + count5 + " fives, ";
+					finalPrintout = finalPrintout + count5 + " five dollar bill, ";
+					
+				}
+				else if(count5 != 0)
+				{
+					finalPrintout = finalPrintout + count5 + " five dollar bills, ";
 				}
 			}
 			
@@ -101,9 +116,14 @@ public class CashRegister {
 //				System.out.println("1: " +count1);
 //				System.out.println("change: " + change);
 				
-				if(count1 != 0)
+				if (count1 == 1)
 				{
-					finalPrintout = finalPrintout + count1 + " ones, ";
+					finalPrintout = finalPrintout + count1 + " one dollar bill, ";
+					
+				}
+				else if(count1 != 0)
+				{
+					finalPrintout = finalPrintout + count1 + " one dollar bills, ";
 				}
 			}
 			change = change * 100;
@@ -116,7 +136,14 @@ public class CashRegister {
 				countQuarter = coins/25;
 				coins = coins - (countQuarter*25);
 				System.out.println("countQuarter: " + countQuarter);
-				if(countQuarter != 0)
+				
+				if (countQuarter == 1)
+				{
+					finalPrintout = finalPrintout + countQuarter + " quarter, ";
+					
+				}
+				
+				else if(countQuarter != 0)
 				{
 					finalPrintout = finalPrintout + countQuarter + " quarters, ";
 					//System.out.println(finalPrintout);
@@ -128,7 +155,12 @@ public class CashRegister {
 				countDime = coins/10;
 				coins = coins - (countDime*10);
 				//System.out.println("countDime: " + countDime);
-				if(countDime != 0)
+				if (countDime == 1)
+				{
+					finalPrintout = finalPrintout + countDime + " dime, ";
+					
+				}
+				else if(countDime != 0)
 				{
 					finalPrintout = finalPrintout + countDime + " dimes, ";
 				}
@@ -139,7 +171,13 @@ public class CashRegister {
 				countNickel = coins/5;
 				coins = coins - (countNickel*5);
 				//System.out.println("countNickel: " + countNickel);
-				if(countNickel != 0)
+				
+				if (countNickel == 1)
+				{
+					finalPrintout = finalPrintout + countNickel + " nickel, ";
+					
+				}
+				else if(countNickel != 0)
 				{
 					finalPrintout = finalPrintout + countNickel + " nickels, ";
 				}
@@ -150,9 +188,15 @@ public class CashRegister {
 				countPenny = coins/1;
 				coins = coins - countPenny;
 				//System.out.println("countPenny: " + countPenny);
-				if(countPenny != 0)
+				
+				if (countPenny == 1)
 				{
-					finalPrintout = finalPrintout + countPenny + " pennies, ";
+					finalPrintout = finalPrintout + countPenny + " penny ";
+					
+				}
+				else if(countPenny != 0)
+				{
+					finalPrintout = finalPrintout + countPenny + " pennies ";
 				}
 			}
 			
