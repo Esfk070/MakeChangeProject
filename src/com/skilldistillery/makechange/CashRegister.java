@@ -22,7 +22,7 @@ public class CashRegister {
 		
 		System.out.println("How much money did the customer give: ");
 		double moneyGiven = keyboard.nextDouble();
-		System.out.println("The customer payed  " + moneyGiven);
+		System.out.println("The customer paid  " + moneyGiven);
 		
 //		User Story #3
 //		Display an appropriate message if the customer provided too little 
@@ -30,7 +30,7 @@ public class CashRegister {
 		
 		if (price > moneyGiven)
 		{
-			System.out.println("Error: Not enough money payed");
+			System.out.println("Error: Not enough money paid");
 						
 		}
 		
@@ -40,36 +40,43 @@ public class CashRegister {
 //		used will not be displayed.
 		else 
 		{
-			System.out.println("Calculate change owed...");
 			double change = moneyGiven - price;
-			System.out.println(change);
-			int count20;
-			int count10;
-			int count5;
-			int count1;
-			int countQuarter;
-			int countDime;
-			int countNickel;
-			int countPenny;
-			int coins;
-			
+			//System.out.println(change);
+			int count20 = 0;
+			int count10 = 0;
+			int count5 = 0;
+			int count1 = 0;
+			int countQuarter = 0;
+			int countDime = 0;
+			int countNickel = 0;
+			int countPenny = 0;
+			int coins = 0;
+			String finalPrintout = "";
 			
 			if (change >= 20)
 			{
 				count20 = (int)change/20;
-				System.out.println("20: "+count20);
+				//System.out.println("20: "+count20);
 				
 				change = change - (count20*20);
-				System.out.println(change);
+				//System.out.println(change);
+				if(count20 != 0)
+				{
+					finalPrintout = finalPrintout + count20 + " twenties, ";
+				}
 			}
 			if (change >=10)
 			{
 				count10 = (int)change/10;
-				System.out.println("10: " + count10);
+				//System.out.println("10: " + count10);
 				
 				change = change - (count10*10);
-				System.out.println("change: " + change);
+				//System.out.println("change: " + change);
 				
+				if(count10 != 0)
+				{
+					finalPrintout = finalPrintout + count10 + " tens, ";
+				}
 			}
 			
 			if (change >=5)
@@ -77,9 +84,13 @@ public class CashRegister {
 				count5 = (int)change/5;
 				
 				change = change - (count5*5);
-				System.out.println("5: " + count5);
+				//System.out.println("5: " + count5);
 
-				System.out.println("change: " + change);
+				//System.out.println("change: " + change);
+				if(count5 != 0)
+				{
+					finalPrintout = finalPrintout + count5 + " fives, ";
+				}
 			}
 			
 			if (change >= 1)
@@ -87,44 +98,66 @@ public class CashRegister {
 				count1 = (int)change/1;
 				change = change -count1;
 				
-				System.out.println("1: " +count1);
-				System.out.println("change: " + change);
+//				System.out.println("1: " +count1);
+//				System.out.println("change: " + change);
 				
+				if(count1 != 0)
+				{
+					finalPrintout = finalPrintout + count1 + " ones, ";
+				}
 			}
 			change = change * 100;
 			change = Math.round(change);
 			coins = (int)change;
-			System.out.println("coins: " + coins);
+			//System.out.println("coins: " + coins);
 			
 			if(coins >=25)
 			{
 				countQuarter = coins/25;
 				coins = coins - (countQuarter*25);
 				System.out.println("countQuarter: " + countQuarter);
+				if(countQuarter != 0)
+				{
+					finalPrintout = finalPrintout + countQuarter + " quarters, ";
+					//System.out.println(finalPrintout);
+				}
 			}
 			
 			if(coins >= 10)
 			{
 				countDime = coins/10;
 				coins = coins - (countDime*10);
-				System.out.println("countDime: " + countDime);
+				//System.out.println("countDime: " + countDime);
+				if(countDime != 0)
+				{
+					finalPrintout = finalPrintout + countDime + " dimes, ";
+				}
 			}
 			
 			if(coins >= 5)
 			{
 				countNickel = coins/5;
 				coins = coins - (countNickel*5);
-				System.out.println("countNickel: " + countNickel);
+				//System.out.println("countNickel: " + countNickel);
+				if(countNickel != 0)
+				{
+					finalPrintout = finalPrintout + countNickel + " nickels, ";
+				}
 			}
 			
 			if(coins >= 1)
 			{
 				countPenny = coins/1;
 				coins = coins - countPenny;
-				System.out.println("countPenny: " + countPenny);
+				//System.out.println("countPenny: " + countPenny);
+				if(countPenny != 0)
+				{
+					finalPrintout = finalPrintout + countPenny + " pennies, ";
+				}
 			}
 			
 			
+			System.out.println(finalPrintout);
 		}
 
 		
@@ -135,7 +168,7 @@ public class CashRegister {
 
 		
 		
-		System.out.print("");
+		//System.out.print("");
 
 		
 		keyboard.close();
