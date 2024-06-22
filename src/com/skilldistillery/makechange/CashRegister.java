@@ -55,10 +55,39 @@ public class CashRegister {
 			if (change >= 20)
 			{
 				count20 = (int)change/20;
-				System.out.println(count20);
+				System.out.println("20: "+count20);
 				
 				change = change - (count20*20);
 				System.out.println(change);
+			}
+			if (change >=10)
+			{
+				count10 = (int)change/10;
+				System.out.println("10: " + count10);
+				
+				change = change - (count10*10);
+				System.out.println("change" + change);
+				
+			}
+			
+			if (change >=5)
+			{
+				count5 = (int)change/5;
+				
+				change = change - (count5*5);
+				System.out.println("5: " + count5);
+
+				System.out.println("change" + change);
+			}
+			
+			if (change >= 1)
+			{
+				count1 = (int)change/1;
+				change = change -count1;
+				
+				System.out.println("1: " +count1);
+				System.out.println("change" + change);
+				
 			}
 			
 		}
