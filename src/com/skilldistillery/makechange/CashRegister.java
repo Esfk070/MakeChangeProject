@@ -8,7 +8,7 @@ public class CashRegister {
 	{
 
 		
-//		User Story #1
+//		User Story #1 
 //		The user is prompted asking for the price of the item.
 		
 		Scanner keyboard = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class CashRegister {
 		
 //		User Story #3
 //		Display an appropriate message if the customer provided too little 
-//		money or the exact amount.	
+//		money or the exact amount	
 		
 		if (price > moneyGiven)
 		{
