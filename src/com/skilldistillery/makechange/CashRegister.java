@@ -41,6 +41,26 @@ public class CashRegister {
 		else 
 		{
 			System.out.println("Calculate change owed...");
+			double change = moneyGiven - price;
+			System.out.println(change);
+			int count20;
+			int count10;
+			int count5;
+			int count1;
+			int countQuarter;
+			int countDime;
+			int countNickel;
+			
+			
+			if (change >= 20)
+			{
+				count20 = (int)change/20;
+				System.out.println(count20);
+				
+				change = change - (count20*20);
+				System.out.println(change);
+			}
+			
 		}
 
 		
