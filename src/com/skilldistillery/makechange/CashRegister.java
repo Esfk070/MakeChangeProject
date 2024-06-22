@@ -50,6 +50,8 @@ public class CashRegister {
 			int countQuarter;
 			int countDime;
 			int countNickel;
+			int countPenny;
+			int coins;
 			
 			
 			if (change >= 20)
@@ -66,7 +68,7 @@ public class CashRegister {
 				System.out.println("10: " + count10);
 				
 				change = change - (count10*10);
-				System.out.println("change" + change);
+				System.out.println("change: " + change);
 				
 			}
 			
@@ -77,7 +79,7 @@ public class CashRegister {
 				change = change - (count5*5);
 				System.out.println("5: " + count5);
 
-				System.out.println("change" + change);
+				System.out.println("change: " + change);
 			}
 			
 			if (change >= 1)
@@ -86,9 +88,42 @@ public class CashRegister {
 				change = change -count1;
 				
 				System.out.println("1: " +count1);
-				System.out.println("change" + change);
+				System.out.println("change: " + change);
 				
 			}
+			change = change * 100;
+			change = Math.round(change);
+			coins = (int)change;
+			System.out.println("coins: " + coins);
+			
+			if(coins >=25)
+			{
+				countQuarter = coins/25;
+				coins = coins - (countQuarter*25);
+				System.out.println("countQuarter: " + countQuarter);
+			}
+			
+			if(coins >= 10)
+			{
+				countDime = coins/10;
+				coins = coins - (countDime*10);
+				System.out.println("countDime: " + countDime);
+			}
+			
+			if(coins >= 5)
+			{
+				countNickel = coins/5;
+				coins = coins - (countNickel*5);
+				System.out.println("countNickel: " + countNickel);
+			}
+			
+			if(coins >= 1)
+			{
+				countPenny = coins/1;
+				coins = coins - countPenny;
+				System.out.println("countPenny: " + countPenny);
+			}
+			
 			
 		}
 
